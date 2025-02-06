@@ -13,7 +13,7 @@ contract FundMe {
         //threshold
         uint256 minimumEth = 50 * 10 ** 18;
 
-        require(getConversion(msg.value) <= minimumEth, "You need to spend more ETH!");
+        require(getConversion(msg.value) >= minimumEth, "You need to spend more ETH!");
 
          addressToAmountFunded[msg.sender] += msg.value;
     }
